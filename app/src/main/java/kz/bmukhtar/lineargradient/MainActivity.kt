@@ -11,16 +11,11 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Immutable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.geometry.center
-import androidx.compose.ui.graphics.*
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import kz.bmukhtar.lineargradient.ui.theme.LinearGradientTheme
-import kotlin.math.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +35,6 @@ fun Gradients() {
     Surface(
         modifier = Modifier
             .fillMaxSize(),
-        color = Color(0xFF0000ff)
     ) {
         LazyColumn(Modifier.fillMaxSize()) {
             items(angles) {
@@ -61,14 +55,14 @@ private fun GradientBox(angle: Float) {
             .background(
                 LinearGradientWithAngle(
                     colors = listOf(
-                        Color(0xff3690EA),
-                        Color(0xff94B3FF)
+                        Color(0xff01579b),
+                        Color(0xffffab91)
                     ),
                     stops = listOf(0.1205f, 0.8785f),
-                    angle = angle,
+                    angleInDegrees = angle,
                 )
             )
-            .size(342.dp, 155.dp)
+            .size(150.dp, 100.dp)
     )
 }
 
