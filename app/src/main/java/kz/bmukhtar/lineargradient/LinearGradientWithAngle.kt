@@ -8,11 +8,20 @@ import androidx.compose.ui.graphics.*
 import kotlin.math.*
 
 /**
- * Android analog of CSS linear-gradient which supports any angle
- * https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient
+ * Creates a linear gradient with the provided colors
+ * and angle.
  *
- * @param useAsCssAngle returns true if CSS gradient angle should be used, false if
- * cartesian angle should be used
+ * @param colors Colors of gradient
+ * @param stops Offsets to determine how the colors are dispersed throughout
+ * the vertical gradient
+ * @param tileMode Determines the behavior for how the shader is to fill a region outside
+ * its bounds. Defaults to [TileMode.Clamp] to repeat the edge pixels
+ * @param angleInDegrees Angle of gradient in degrees
+ * @param useAsCssAngle Determines whether the CSS gradient angle should be used
+ * by default cartesian angle is used
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient">
+ *     linear-gradient</a>
  */
 @Immutable
 class LinearGradientWithAngle internal constructor(
