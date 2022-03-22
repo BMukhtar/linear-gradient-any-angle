@@ -58,7 +58,7 @@ private fun GradientBox(angle: Float) {
         modifier = Modifier
             .padding(16.dp)
             .background(
-                Brush.linearGradientWithAngle(
+                Brush.linearGradient(
                     0.1205f to Color(0xff01579b),
                     0.8785f to Color(0xffffab91),
                     angleInDegrees = angle,

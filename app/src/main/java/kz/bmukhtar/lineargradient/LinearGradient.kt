@@ -131,7 +131,7 @@ class LinearGradient constructor(
  *     linear-gradient</a>
  */
 @Stable
-fun Brush.Companion.linearGradientWithAngle(
+fun Brush.Companion.linearGradient(
     colors: List<Color>,
     stops: List<Float>? = null,
     tileMode: TileMode = TileMode.Clamp,
@@ -160,7 +160,7 @@ fun Brush.Companion.linearGradientWithAngle(
  *     linear-gradient</a>
  */
 @Stable
-fun Brush.Companion.linearGradientWithAngle(
+fun Brush.Companion.linearGradient(
     vararg colorStops: Pair<Float, Color>,
     tileMode: TileMode = TileMode.Clamp,
     angleInDegrees: Float = 0f,
